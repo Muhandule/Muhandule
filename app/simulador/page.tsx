@@ -25,8 +25,7 @@ export default function SimuladorPage() {
   }
 
   const calculateLoan = (amount: number, months: number) => {
-    const annualRate = 0.3 // 30% ao ano
-    const monthlyRate = annualRate / 12
+    const monthlyRate = 0.3 // 30% ao mês
     const totalPayment = amount * (1 + monthlyRate * months)
     const interest = totalPayment - amount
     const monthlyPayment = totalPayment / months
@@ -245,11 +244,13 @@ export default function SimuladorPage() {
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent className="bg-gray-900 border-gray-700">
+                        <SelectItem value="1">1 mês</SelectItem>
+                        <SelectItem value="2">2 meses</SelectItem>
+                        <SelectItem value="3">3 meses</SelectItem>
                         <SelectItem value="6">6 meses</SelectItem>
                         <SelectItem value="12">12 meses (1 ano)</SelectItem>
                         <SelectItem value="18">18 meses</SelectItem>
                         <SelectItem value="24">24 meses (2 anos)</SelectItem>
-                        <SelectItem value="36">36 meses (3 anos)</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -259,7 +260,8 @@ export default function SimuladorPage() {
                       <Info className="h-5 w-5 text-red-400 mt-0.5 flex-shrink-0" />
                       <div className="text-sm text-red-400">
                         <p className="font-semibold mb-1">Taxa de Juros:</p>
-                        <p>30% ao ano (2,5% ao mês)</p>
+                        <p>30% ao mês (equivalente a 1% ao dia)</p>
+                        <p className="text-xs mt-1 text-red-300">*Taxa e período negociáveis com o gestor</p>
                       </div>
                     </div>
                   </div>

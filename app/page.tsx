@@ -161,17 +161,24 @@ export default function HomePage() {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
                     <p className="text-gray-300">
-                      Taxa de juros de <span className="text-red-400 font-semibold">30% ao ano</span>
+                      Taxa de juros de <span className="text-red-400 font-semibold">30% ao mês</span> (equivalente a 1%
+                      ao dia)
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
                     <p className="text-gray-300">Aprovação rápida e sem burocracia</p>
                   </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
+                    <p className="text-gray-300">
+                      <span className="text-yellow-400">*Taxa e período negociáveis com o gestor</span>
+                    </p>
+                  </div>
                 </div>
                 <div className="bg-red-400/10 border border-red-400/20 rounded-lg p-4">
                   <p className="text-red-400 font-semibold text-center">
-                    Exemplo: Pegue 1.000 MZN → Pague 1.300 MZN em 1 ano
+                    Exemplo: Pegue 1.000 MZN → Pague 1.300 MZN em 1 mês
                   </p>
                 </div>
               </CardContent>
@@ -233,9 +240,10 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="bg-red-400/10 border border-red-400/20 rounded-lg p-4 space-y-2">
-                    <p className="text-sm text-gray-400">Após 1 ano você pagará:</p>
+                    <p className="text-sm text-gray-400">Após 1 mês você pagará:</p>
                     <p className="text-2xl font-bold text-red-400">1.300 MZN</p>
-                    <p className="text-sm text-red-400">Juros: 300 MZN (30%)</p>
+                    <p className="text-sm text-red-400">Juros: 300 MZN (30% ao mês)</p>
+                    <p className="text-xs text-yellow-400">*Taxa e período negociáveis</p>
                   </div>
                 </div>
               </div>
